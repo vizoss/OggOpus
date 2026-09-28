@@ -42,7 +42,7 @@ jobs:
       - name: Set up Android SDK and accept licenses
         uses: android-actions/setup-android@v4
         with:
-          accept-android-sdk-licenses: 'yes'
+          accept-android-sdk-licenses: 'true'
           packages: 'platform-tools platforms;android-34 build-tools;34.0.0 build-tools;35.0.0 cmake;3.22.1 ndk;28.0.12674087'
       - name: Test and stage AAR
         working-directory: release-source/android
