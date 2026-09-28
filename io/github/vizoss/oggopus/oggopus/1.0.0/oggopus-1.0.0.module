@@ -1,0 +1,96 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.vizoss.oggopus",
+    "module": "oggopus",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.9"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.24"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "oggopus-1.0.0.aar",
+          "url": "oggopus-1.0.0.aar",
+          "size": 2981203,
+          "sha512": "ecbe74867142f3ae89fe4d2c3565a8b8942ea931d94185171fd8397e29207ef3932d29462fb6c3d32b6905414303f7610024cdb949e9f9e44a9ac82fca466a1b",
+          "sha256": "7bf13405aa15483dd3be765bbd230d344e803363af3f985ca836e54148b1b063",
+          "sha1": "40108d6c15f21cb6b668181a37587186761cc562",
+          "md5": "b702fdc165b873828c690c0eeed37321"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.24"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "oggopus-1.0.0.aar",
+          "url": "oggopus-1.0.0.aar",
+          "size": 2981203,
+          "sha512": "ecbe74867142f3ae89fe4d2c3565a8b8942ea931d94185171fd8397e29207ef3932d29462fb6c3d32b6905414303f7610024cdb949e9f9e44a9ac82fca466a1b",
+          "sha256": "7bf13405aa15483dd3be765bbd230d344e803363af3f985ca836e54148b1b063",
+          "sha1": "40108d6c15f21cb6b668181a37587186761cc562",
+          "md5": "b702fdc165b873828c690c0eeed37321"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "oggopus-1.0.0-sources.jar",
+          "url": "oggopus-1.0.0-sources.jar",
+          "size": 5891,
+          "sha512": "acda0aa5879467b9c2e117c87f95f018dba5fcfebf26a60b648d8ca071a2e65291c255dc6a29572a6a9e9ebb28cd781ac6530a6952ed7691057b49336bf35c6f",
+          "sha256": "9f08fd063e0ed99aa841913f7cd3b613dc9ed7767cfce74e4d3a4f9cccf6dbb3",
+          "sha1": "45617644369d120369c32c7ada42b94f55dacbd6",
+          "md5": "1b58b8da6f00bf0283de034562db6849"
+        }
+      ]
+    }
+  ]
+}
