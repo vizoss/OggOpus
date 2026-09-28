@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "ogg-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vizoss/ogg-swift.git",
+      "state" : {
+        "revision" : "d4db0bba94997ff1dab21cf866226eb1f9b0d64d",
+        "version" : "0.8.3"
+      }
+    },
+    {
+      "identity" : "opus-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vizoss/opus-swift.git",
+      "state" : {
+        "revision" : "dda6fff174b30e1f6d6272812d5901349613204a",
+        "version" : "0.8.3"
+      }
+    }
+  ],
+  "version" : 2
+}

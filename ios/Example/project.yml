@@ -1,0 +1,45 @@
+name: OggOpusDemo
+options:
+  deploymentTarget:
+    iOS: '15.0'
+packages:
+  OggOpus:
+    path: ../..
+targets:
+  OggOpusDemo:
+    type: application
+    platform: iOS
+    sources: [Sources]
+    dependencies:
+      - package: OggOpus
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.thk.oggopus.demo
+        SWIFT_VERSION: '5.9'
+        TARGETED_DEVICE_FAMILY: '1,2'
+        CODE_SIGN_STYLE: Automatic
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_FILE: Info.plist
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: 用于录制 Ogg Opus 语音并试听。
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+  OggOpusTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [Tests]
+    dependencies:
+      - target: OggOpusDemo
+      - package: OggOpus
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.thk.oggopus.demo.tests
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: '5.9'
+schemes:
+  OggOpusDemo:
+    build:
+      targets:
+        OggOpusDemo: all
+    run:
+      config: Debug
+    test:
+      targets: [OggOpusTests]

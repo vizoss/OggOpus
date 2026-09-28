@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1293690C3D951CBE5EF325E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650F21BDD82CC1DEF6BA7E6A /* AppDelegate.swift */; };
+		528C2CE22696935983BD119A /* VoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B426E2EB5F4998627C6CCA3 /* VoiceViewController.swift */; };
+		7C46D4BC62CE93088FDCB4FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA96F18AA6835D0B730FEA /* SceneDelegate.swift */; };
+		BA8C2D78D1992A799CB3E32B /* OggOpus in Frameworks */ = {isa = PBXBuildFile; productRef = 7AF8BE286A3027252B7C6D64 /* OggOpus */; };
+		C96EF7685AA7493AD5AB93A0 /* RecordingConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263E6034C92CD80F16AF276 /* RecordingConversionTests.swift */; };
+		EB434CF9A996E6607EB1F6D0 /* OggOpus in Frameworks */ = {isa = PBXBuildFile; productRef = 819CD66C8E5A77E22E573CCE /* OggOpus */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AEE468D901E5A525393A099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3608FD8792AC61E935515F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4D16B8997A5E0C69C512855;
+			remoteInfo = OggOpusDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0263E6034C92CD80F16AF276 /* RecordingConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingConversionTests.swift; sourceTree = "<group>"; };
+		1B426E2EB5F4998627C6CCA3 /* VoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceViewController.swift; sourceTree = "<group>"; };
+		650F21BDD82CC1DEF6BA7E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		765469699CD2A9E897274B1A /* OggOpusTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = OggOpusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F09AE6C9FD01E0A15053E17 /* OggOpusDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = OggOpusDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2FA96F18AA6835D0B730FEA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F0D48BF032E6AE84A94936C7 /* OggOpus */ = {isa = PBXFileReference; lastKnownFileType = folder; name = OggOpus; path = ../..; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D380B221AF4008F3E63F683 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA8C2D78D1992A799CB3E32B /* OggOpus in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F898DE0457D9FC531E075863 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB434CF9A996E6607EB1F6D0 /* OggOpus in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		101DFA003F5A3F7C39E25F67 = {
+			isa = PBXGroup;
+			children = (
+				F971C3B0AF028E54BBB5B71E /* Packages */,
+				F0B8E5B82ED16558FBCCA81F /* Sources */,
+				C404E0B5C0C22123DB9ADDDC /* Tests */,
+				7CA8630539796B074FAACDEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7CA8630539796B074FAACDEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F09AE6C9FD01E0A15053E17 /* OggOpusDemo.app */,
+				765469699CD2A9E897274B1A /* OggOpusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C404E0B5C0C22123DB9ADDDC /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0263E6034C92CD80F16AF276 /* RecordingConversionTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F0B8E5B82ED16558FBCCA81F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				650F21BDD82CC1DEF6BA7E6A /* AppDelegate.swift */,
+				D2FA96F18AA6835D0B730FEA /* SceneDelegate.swift */,
+				1B426E2EB5F4998627C6CCA3 /* VoiceViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F971C3B0AF028E54BBB5B71E /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				F0D48BF032E6AE84A94936C7 /* OggOpus */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB8BC660FA37915E03695F0D /* OggOpusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75F445B6F327B6093983B4E0 /* Build configuration list for PBXNativeTarget "OggOpusTests" */;
+			buildPhases = (
+				D59E8046398C8B521EA6B210 /* Sources */,
+				F898DE0457D9FC531E075863 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B46B2622F47E95F6BC47C374 /* PBXTargetDependency */,
+			);
+			name = OggOpusTests;
+			packageProductDependencies = (
+				819CD66C8E5A77E22E573CCE /* OggOpus */,
+			);
+			productName = OggOpusTests;
+			productReference = 765469699CD2A9E897274B1A /* OggOpusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F4D16B8997A5E0C69C512855 /* OggOpusDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 562CEE20B2DD7E56A0A2D20B /* Build configuration list for PBXNativeTarget "OggOpusDemo" */;
+			buildPhases = (
+				09F5C7422F62B34F23C39D55 /* Sources */,
+				7D380B221AF4008F3E63F683 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OggOpusDemo;
+			packageProductDependencies = (
+				7AF8BE286A3027252B7C6D64 /* OggOpus */,
+			);
+			productName = OggOpusDemo;
+			productReference = 8F09AE6C9FD01E0A15053E17 /* OggOpusDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3608FD8792AC61E935515F17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					F4D16B8997A5E0C69C512855 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AAD4C2D3E063BC4F13A548EA /* Build configuration list for PBXProject "OggOpusDemo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 101DFA003F5A3F7C39E25F67;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2055C3F1C3E3257646DB3BFB /* XCLocalSwiftPackageReference "../.." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7CA8630539796B074FAACDEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4D16B8997A5E0C69C512855 /* OggOpusDemo */,
+				CB8BC660FA37915E03695F0D /* OggOpusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09F5C7422F62B34F23C39D55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1293690C3D951CBE5EF325E7 /* AppDelegate.swift in Sources */,
+				7C46D4BC62CE93088FDCB4FC /* SceneDelegate.swift in Sources */,
+				528C2CE22696935983BD119A /* VoiceViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D59E8046398C8B521EA6B210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96EF7685AA7493AD5AB93A0 /* RecordingConversionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B46B2622F47E95F6BC47C374 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4D16B8997A5E0C69C512855 /* OggOpusDemo */;
+			targetProxy = 0AEE468D901E5A525393A099 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3F93CCFEFA9572E0FE4CA668 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thk.oggopus.demo.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OggOpusDemo.app/OggOpusDemo";
+			};
+			name = Debug;
+		};
+		47B608022FEF42EFFBDE1186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "用于录制 Ogg Opus 语音并试听。";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thk.oggopus.demo;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4E2A5A363A4D696CCC959CE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thk.oggopus.demo.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OggOpusDemo.app/OggOpusDemo";
+			};
+			name = Release;
+		};
+		653D29D755DEB35C5E079B10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "用于录制 Ogg Opus 语音并试听。";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thk.oggopus.demo;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AD50E84A774C419D0C215751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ECB1AAB4C58D55968F5DFD74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		562CEE20B2DD7E56A0A2D20B /* Build configuration list for PBXNativeTarget "OggOpusDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47B608022FEF42EFFBDE1186 /* Debug */,
+				653D29D755DEB35C5E079B10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		75F445B6F327B6093983B4E0 /* Build configuration list for PBXNativeTarget "OggOpusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F93CCFEFA9572E0FE4CA668 /* Debug */,
+				4E2A5A363A4D696CCC959CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AAD4C2D3E063BC4F13A548EA /* Build configuration list for PBXProject "OggOpusDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD50E84A774C419D0C215751 /* Debug */,
+				ECB1AAB4C58D55968F5DFD74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		2055C3F1C3E3257646DB3BFB /* XCLocalSwiftPackageReference "../.." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7AF8BE286A3027252B7C6D64 /* OggOpus */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OggOpus;
+		};
+		819CD66C8E5A77E22E573CCE /* OggOpus */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OggOpus;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3608FD8792AC61E935515F17 /* Project object */;
+}

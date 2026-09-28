@@ -1,0 +1,13 @@
+.DS_Store
+.gradle/
+local.properties
+.idea/
+**/.cxx/
+/.build/
+/.swiftpm/
+**/build/
+DerivedData/
+*.xcworkspace
+Pods/
+xcuserdata/
+*.xcarchive

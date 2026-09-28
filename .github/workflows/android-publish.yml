@@ -1,0 +1,67 @@
+name: Android – publish public Maven repository
+
+on:
+  push:
+    tags: ['[0-9]*.[0-9]*.[0-9]*']
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Existing x.y.z tag to publish
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+        with: { persist-credentials: false }
+      - name: Select and validate release tag
+        id: release
+        env:
+          REQUESTED_TAG: ${{ inputs.release_tag }}
+        run: |
+          TAG="${REQUESTED_TAG:-$GITHUB_REF_NAME}"
+          [[ "$TAG" =~ ^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]] || exit 1
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v5
+        with:
+          ref: refs/tags/${{ steps.release.outputs.tag }}
+          path: release-source
+          persist-credentials: false
+      - name: Validate release versions
+        working-directory: release-source
+        env:
+          GITHUB_REF_TYPE: tag
+          GITHUB_REF_NAME: ${{ steps.release.outputs.tag }}
+        run: bash scripts/release-version.sh
+      - uses: actions/setup-java@v5
+        with: { distribution: temurin, java-version: '17' }
+      - name: Test and stage AAR
+        working-directory: release-source/android
+        run: ./gradlew :oggopus:publishReleasePublicationToStaticMavenRepository -I "$GITHUB_WORKSPACE/scripts/static-maven.init.gradle" -PVERSION_NAME=${{ steps.release.outputs.tag }} -PstaticMavenDir="$RUNNER_TEMP/maven-staging"
+      - name: Build demo APK
+        working-directory: release-source/android
+        run: ./gradlew :sample:assembleDebug
+      - uses: actions/upload-artifact@v4
+        with:
+          name: android-${{ steps.release.outputs.tag }}
+          path: |
+            release-source/android/oggopus/build/outputs/aar/*.aar
+            release-source/android/sample/build/outputs/apk/debug/*.apk
+      - uses: actions/checkout@v5
+        with: { path: public-repository, fetch-depth: 1 }
+      - name: Publish immutable Maven version
+        working-directory: public-repository
+        env:
+          RELEASE_VERSION: ${{ steps.release.outputs.tag }}
+        run: |
+          if git ls-remote --exit-code --heads origin maven-repo; then git fetch origin maven-repo && git checkout -B maven-repo FETCH_HEAD; else git switch --orphan maven-repo; fi
+          ruby "$GITHUB_WORKSPACE/scripts/merge-maven-repository.rb" "$RUNNER_TEMP/maven-staging" "$PWD" "$RELEASE_VERSION"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add io/github/vizoss/oggopus
+          git diff --cached --quiet || (git commit -m "Publish OggOpus $RELEASE_VERSION" && git push origin HEAD:maven-repo)
