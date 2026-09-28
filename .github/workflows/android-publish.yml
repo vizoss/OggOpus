@@ -39,12 +39,20 @@ jobs:
         run: GITHUB_REF_TYPE=tag GITHUB_REF_NAME="$RELEASE_TAG" bash scripts/release-version.sh
       - uses: actions/setup-java@v5
         with: { distribution: temurin, java-version: '17' }
+      - name: Set up Android SDK and accept licenses
+        uses: android-actions/setup-android@v4
+        with:
+          accept-android-sdk-licenses: 'yes'
+          packages: 'platform-tools platforms;android-34 build-tools;34.0.0 build-tools;35.0.0 cmake;3.22.1 ndk;28.0.12674087'
       - name: Test and stage AAR
         working-directory: release-source/android
         run: ./gradlew :oggopus:publishReleasePublicationToStaticMavenRepository -I "$GITHUB_WORKSPACE/scripts/static-maven.init.gradle" -PVERSION_NAME=${{ steps.release.outputs.tag }} -PstaticMavenDir="$RUNNER_TEMP/maven-staging"
       - name: Build demo APK
         working-directory: release-source/android
         run: ./gradlew :sample:assembleDebug
+      - name: Verify 16 KB page size compatibility
+        working-directory: release-source
+        run: bash scripts/check-android-16kb.sh android/sample/build/outputs/apk/debug/sample-debug.apk
       - uses: actions/upload-artifact@v4
         with:
           name: android-${{ steps.release.outputs.tag }}
